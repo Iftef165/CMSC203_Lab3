@@ -1,5 +1,3 @@
-package labWork2;
-
 import java.util.ArrayList;
 
 public class GradeBook
@@ -21,6 +19,7 @@ public class GradeBook
    {
 	   return scoresSize;
    }
+   
 
    /**
       Adds a score to this gradebook.
@@ -46,7 +45,7 @@ public class GradeBook
    public double sum()
    {
       double total = 0;
-      for (int i = 0; i <= scoresSize; i++)
+      for (int i = 0; i < scoresSize; i++)
       {
          total = total + scores[i];
       }
@@ -88,18 +87,14 @@ public class GradeBook
    
    public String toString()
    {
-	   String output = "";
+	   String scoreRep = "";
 	   
 	   for(int i=0;i<scores.length;i++)
 	   {
-		   output += scores[i];
-		   if(i<scores.length-1)
-		   {
-			   output += " ";
-		   }
+		   scoreRep += scores[i] + " ";
 	   }
 	   
-	   return output;
+	   return scoreRep;
    }
 }
 
